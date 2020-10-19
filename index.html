@@ -7,8 +7,10 @@
     var xmlHttpRequest = new XMLHttpRequest();
     xmlHttpRequest.onreadystatechange = function()
     {
+      console.log("1")
       if(this.readyState==4 && this.status==200)
       {
+        console.log("2")
         if(this.response)
         {
           console.log(this.response);
