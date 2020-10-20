@@ -3,10 +3,24 @@
   <head>
   </head>
 <body>
-  hahaha
-  <div id="app">
-    {{message}}
+<div id="app">
+  <div>
+    <b-table-simple>
+      <b-thead>
+        <b-th>name</b-th>
+        <b-th>amount</b-th>
+      </b-thead>
+      <b-tbody>
+        <template v-for="(shumokudata, shumoku) in all">
+          <b-tr>
+            <b-td>種目：{{ shumoku.name }}</b-td>
+          </b-tr>
+        </template>
+      </b-tbody>
+    </b-table-simple>
   </div>
+</div>
+
   
 <!-- Load required Bootstrap and BootstrapVue CSS -->
 <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
