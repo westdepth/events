@@ -1,7 +1,8 @@
 new Vue({
   el: '#app',
   data: {
-    message: 'Hello Vue.js!'
+    message: 'Hello Vue.js!',
+    all : {}
   },
   methods: {
     clicked: function() {
@@ -19,7 +20,7 @@ new Vue({
         console.log("2")
         if(this.response)
         {
-          self.message = this.response
+          self.all = this.response
           console.log(this.response);
         }
       }
