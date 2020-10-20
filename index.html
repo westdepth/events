@@ -5,22 +5,14 @@
 <body>
 <div id="app">
   <div>
-    <b-table-simple>
-      <b-thead>
-      </b-thead>
-      <b-tbody>
+    <b-list-group>
         <template v-for="(shumokudata, shumoku) in all">
           <template v-for="(kumidata, kumi) in shumokudata">
-            <b-tr>
-              <b-td>{{ shumoku }} {{ kumi }}組</b-td>
-            </b-tr>
-            <b-tr v-for="dat in kumidata">
-              <b-td>{{ dat.name }}</b-td>
-            </b-tr>
+            <b-list-group-item>{{ shumoku }} {{ kumi }}組</b-list-group-item>
+            <b-list-group-item v-for="dat in kumidata">{{ dat.name }}</b-list-group-item>
           </template>
         </template>
-      </b-tbody>
-    </b-table-simple>
+    </b-list-group>
   </div>
 </div>
 
