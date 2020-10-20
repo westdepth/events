@@ -7,14 +7,17 @@
   <div>
     <b-table-simple>
       <b-thead>
-        <b-th>name</b-th>
-        <b-th>amount</b-th>
       </b-thead>
       <b-tbody>
         <template v-for="(shumokudata, shumoku) in all">
           <b-tr>
             <b-td>種目：{{ shumoku }}</b-td>
           </b-tr>
+          <template v-for="(kumidata, kumi) in shumokudata">
+            <b-tr>
+              <b-td>組：{{ kumi }}</b-td>
+            </b-tr>
+          </template>
         </template>
       </b-tbody>
     </b-table-simple>
