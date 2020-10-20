@@ -10,12 +10,9 @@
       </b-thead>
       <b-tbody>
         <template v-for="(shumokudata, shumoku) in all">
-          <b-tr>
-            <b-td>種目：{{ shumoku }}</b-td>
-          </b-tr>
           <template v-for="(kumidata, kumi) in shumokudata">
             <b-tr>
-              <b-td>組：{{ kumi }}</b-td>
+              <b-td>{{ shumoku }} {{ kumi }}組</b-td>
             </b-tr>
           </template>
         </template>
