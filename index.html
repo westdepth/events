@@ -18,10 +18,10 @@
             <b-list-group-item v-for="dat in kumidata" class="d-flex align-items-stretch justify-content-between">
               <div class="">
                 {{ dat.name }}<br>
-                ({{ dat.univ }}:{{ dat.grad }})
+                <span style="font-size:12px;">({{ dat.univ }}:{{ dat.grad }})</span>
               </div>
               <div class="d-flex flex-column">
-                <div class="d-flex" style="font-size:14px;">
+                <div class="d-flex" style="font-size:12px;">
                   {{ dat.lap50 }}/{{dat.lap100}}/{{dat.lap150}}/{{dat.lao200}}
                 </div>
                 <div class="d-flex">
