@@ -2,6 +2,11 @@
 <html>
   <head>
     <meta name=viewport content="width=device-width,initial-scale=1">
+    <style type="text/css">
+      <!--
+      /*.f-container{display:flex;}*/
+      -->
+    </style>
   </head>
 <body>
 <div id="app">
@@ -10,7 +15,11 @@
         <template v-for="(shumokudata, shumoku) in all">
           <template v-for="(kumidata, kumi) in shumokudata">
             <b-list-group-item>{{ shumoku }} {{ kumi }}組</b-list-group-item>
-            <b-list-group-item v-for="dat in kumidata" class="f-container">{{ dat.name }}</b-list-group-item>
+            <b-list-group-item v-for="dat in kumidata" class="d-flex align-items-stretch">
+              <<div class="">
+              {{ dat.name }}<br>
+              ({{ dat.univ }}:{{ grad }})
+            </b-list-group-item>
           </template>
         </template>
     </b-list-group>
