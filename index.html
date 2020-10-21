@@ -20,8 +20,13 @@
                 {{ dat.name }}<br>
                 ({{ dat.univ }}:{{ dat.grad }})
               </div>
-              <div class="">
-                {{ dat.lap50 }}/{{dat.lap100}}/{{dat.lap150}}/{{dat.lao200}}
+              <div class="d-flex flex-column">
+                <div class="d-flex">
+                  {{ dat.lap50 }}/{{dat.lap100}}/{{dat.lap150}}/{{dat.lao200}}
+                </div>
+                <div class="d-flex">
+                  {{dat.time}}({{dat.ent}})
+                </div>
               </div>
             </b-list-group-item>
           </template>
