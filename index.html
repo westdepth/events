@@ -15,7 +15,7 @@
     <b-list-group>
         <template v-for="(shumokudata, shumoku) in all">
           <template v-for="(kumidata, kumi) in shumokudata">
-            <b-list-group-item class="sticky-top">{{ shumoku }} {{ kumi }}組</b-list-group-item>
+            <b-list-group-item class="sticky-top bg-primary">{{ shumoku }} {{ kumi }}組</b-list-group-item>
             <b-list-group-item v-for="dat in kumidata" class="d-flex align-items-stretch justify-content-between">
               <div class="">
                 {{ dat.name }}<br>
