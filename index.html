@@ -11,11 +11,11 @@
 <body>
 <div id="app">
   <div>
-    <div class="fixed-top">超速報 - 関国OB2020</div>
-    <b-list-group>
+    <div class="fixed-top" style="padding:0;height:16px;">超速報 - 関国OB2020</div>
+    <b-list-group style="padding-top:16px;"">
         <template v-for="(shumokudata, shumoku) in all">
           <template v-for="(kumidata, kumi) in shumokudata">
-            <b-list-group-item class="sticky-top bg-primary">{{ shumoku }} {{ kumi }}組</b-list-group-item>
+            <b-list-group-item class="sticky-top bg-primary text-white">{{ shumoku }} {{ kumi }}組</b-list-group-item>
             <b-list-group-item v-for="dat in kumidata" class="d-flex align-items-stretch justify-content-between">
               <div class="">
                 {{ dat.name }}<br>
