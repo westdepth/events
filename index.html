@@ -16,9 +16,13 @@
           <template v-for="(kumidata, kumi) in shumokudata">
             <b-list-group-item>{{ shumoku }} {{ kumi }}組</b-list-group-item>
             <b-list-group-item v-for="dat in kumidata" class="d-flex align-items-stretch">
-              <<div class="">
-              {{ dat.name }}<br>
-              ({{ dat.univ }}:{{ dat.grad }})
+              <div class="">
+                {{ dat.name }}<br>
+                ({{ dat.univ }}:{{ dat.grad }})
+              </div>
+              <div class="">
+                {{ dat.lap50 }}/{{dat.lap100}}/{{dat.lap150}}/{{dat.lao200}}
+              </div>
             </b-list-group-item>
           </template>
         </template>
