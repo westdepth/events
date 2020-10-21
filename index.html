@@ -10,7 +10,7 @@
         <template v-for="(shumokudata, shumoku) in all">
           <template v-for="(kumidata, kumi) in shumokudata">
             <b-list-group-item>{{ shumoku }} {{ kumi }}組</b-list-group-item>
-            <b-list-group-item v-for="dat in kumidata">{{ dat.name }}</b-list-group-item>
+            <b-list-group-item v-for="dat in kumidata" class="f-container">{{ dat.name }}</b-list-group-item>
           </template>
         </template>
     </b-list-group>
