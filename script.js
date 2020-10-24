@@ -15,10 +15,10 @@ new Vue({
       var xmlHttpRequest = new XMLHttpRequest();
       xmlHttpRequest.onreadystatechange = function()
       {
-        console.log("1")
+        //console.log("1")
         if(this.readyState==4 && this.status==200)
         {
-          console.log("2")
+          //console.log("2")
           if(this.response)
           {
             for(var shumoku in all){
@@ -27,7 +27,7 @@ new Vue({
 
             self.all = this.response
             self.loading=false;
-            console.log(this.response);
+            console.log("gotData!");
           }
         }
       }
