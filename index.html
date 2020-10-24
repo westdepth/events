@@ -9,39 +9,40 @@
     </style>
   </head>
 <body>
-<div id="app">
-  <div>
-    <div style="padding:0;height:16px;">超速報 - 関国OB2020</div>
-    <b-list-group style="padding-top:16px;">
-        <template v-for="(shumokudata, shumoku) in all">
-          <template v-for="(kumidata, kumi) in shumokudata">
-            <b-list-group-item class="sticky-top bg-primary text-white">{{ shumoku }} {{ kumi }}組</b-list-group-item>
-            <b-list-group-item v-for="dat in kumidata" class="d-flex align-items-stretch justify-content-between">
-              <div class="">
-                {{ dat.name }}<br>
-                <span style="font-size:12px;">({{ dat.univ }}:{{ dat.grad }})</span>
-              </div>
-              <div class="d-flex flex-column">
-                <div class="d-flex" style="font-size:12px;">
-                  {{ dat.lap50 }}<br>{{dat.lap100}}<br>{{dat.lap150}}<br>{{dat.lao200}}
+<div style="padding-top:20px;">
+  <div id="app">
+    <div>
+      <div class="fixed-top" style="height:20px;">超速報 - 関国OB2020</div>
+      <b-list-group style="padding-top:16px;">
+          <template v-for="(shumokudata, shumoku) in all">
+            <template v-for="(kumidata, kumi) in shumokudata">
+              <b-list-group-item class="sticky-top bg-primary text-white">{{ shumoku }} {{ kumi }}組</b-list-group-item>
+              <b-list-group-item v-for="dat in kumidata" class="d-flex align-items-stretch justify-content-between">
+                <div class="">
+                  {{ dat.name }}<br>
+                  <span style="font-size:12px;">({{ dat.univ }}:{{ dat.grad }})</span>
                 </div>
-                <div class="d-flex">
-                  {{dat.time}}<span style="font-size:12px;">({{dat.ent}})</span>
+                <div class="d-flex flex-column">
+                  <div class="d-flex" style="font-size:12px;">
+                    {{ dat.lap50 }}<br>{{dat.lap100}}<br>{{dat.lap150}}<br>{{dat.lao200}}
+                  </div>
+                  <div class="d-flex">
+                    {{dat.time}}<span style="font-size:12px;">({{dat.ent}})</span>
+                  </div>
                 </div>
-              </div>
-            </b-list-group-item>
+              </b-list-group-item>
+            </template>
           </template>
-        </template>
-    </b-list-group>
+      </b-list-group>
+    </div>
+    <h1 style="position:fixed;right:20px;bottom:20px;">
+      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-repeat round-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
+        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+      </svg>
+    </h1>
   </div>
-  <h1 style="position:fixed;right:20px;bottom:20px;">
-    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-repeat round-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-      <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
-      <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
-    </svg>
-  </h1>
 </div>
-
 <!-- Load required Bootstrap and BootstrapVue CSS -->
 <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
 <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
