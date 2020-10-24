@@ -11,8 +11,10 @@
 <body>
 <div style="padding-top:20px;">
   <div id="app">
+    <b-navbar>
+    <b-navbar-brand href="#">超速報 - 関国OB2020</b-navbar-brand>
+    </b-navbar>
     <div>
-      <div class="b-navbar" style="height:20px;">超速報 - 関国OB2020</div>
       <b-list-group style="margin-top:20px;">
           <template v-for="(shumokudata, shumoku) in all">
             <template v-for="(kumidata, kumi) in shumokudata">
