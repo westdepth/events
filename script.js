@@ -37,6 +37,6 @@ new Vue({
     }
   },
   created: function(){
-    getData();
+    this.getData();
   }
 });
