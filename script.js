@@ -43,7 +43,7 @@ new Vue({
 
             self.all = this.response
             self.loading=false;
-            console.log("gotData!");
+            console.log(this.response);
           }
         }
       }
