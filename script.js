@@ -21,7 +21,9 @@ new Vue({
           console.log("2")
           if(this.response)
           {
-
+            for(var shumoku in all){
+              console.log(shumoku);
+            }
 
             self.all = this.response
             self.loading=false;
