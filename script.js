@@ -30,24 +30,24 @@ new Vue({
           if(this.response)
           {
             self.all = this.response
-            for(var shumoku in this.all){
+            for(var shumoku in self.all){
               console.log(shumoku);
-              for(var kumi in this.all[shumoku]){
+              for(var kumi in self.all[shumoku]){
                 console.log(""+kumi+"組");
-                console.log(this.all[shumoku][kumi]);
-                for(var lane in this.all[shumoku][kumi]){
+                console.log(self.all[shumoku][kumi]);
+                for(var lane in self.all[shumoku][kumi]){
                   console.log("hello");
-                  console.log(this.all[shumoku][kumi][lane].name);
-                  this.all[shumoku][kumi][lane].lap100=self.getTimeDiff(this.all[shumoku][kumi][lane].sp100,this.all[shumoku][kumi][lane].sp50);
-                  this.all[shumoku][kumi][lane].lap200=self.getTimeDiff(this.all[shumoku][kumi][lane].sp200,this.all[shumoku][kumi][lane].sp150);
-                  this.all[shumoku][kumi][lane].lap150=self.getTimeDiff(this.all[shumoku][kumi][lane].sp150,this.all[shumoku][kumi][lane].sp100);
-                  console.log(this.all[shumoku][kumi][lane].lap100);
+                  console.log(self.all[shumoku][kumi][lane].name);
+                  self.all[shumoku][kumi][lane].lap100=self.getTimeDiff(self.all[shumoku][kumi][lane].sp100,self.all[shumoku][kumi][lane].sp50);
+                  self.all[shumoku][kumi][lane].lap200=self.getTimeDiff(self.all[shumoku][kumi][lane].sp200,self.all[shumoku][kumi][lane].sp150);
+                  self.all[shumoku][kumi][lane].lap150=self.getTimeDiff(self.all[shumoku][kumi][lane].sp150,self.all[shumoku][kumi][lane].sp100);
+                  console.log(self.all[shumoku][kumi][lane].lap100);
                 }
               }
             }
 
             self.loading=false;
-            console.log(this.response);
+            console.log(this.all);
           }
         }
       }
