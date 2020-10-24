@@ -34,9 +34,11 @@ new Vue({
               for(var kumi in this.response[shumoku]){
                 console.log(""+kumi+"組");
                 for(var lane in this.response[shumoku][kumi]){
+                  console.log(this.response[shumoku][kumi][lane].name);
                   this.response[shumoku][kumi][lane].lap100=self.getTimeDiff(this.response[shumoku][kumi][lane].sp100,this.response[shumoku][kumi][lane].sp50);
                   this.response[shumoku][kumi][lane].lap200=self.getTimeDiff(this.response[shumoku][kumi][lane].sp200,this.response[shumoku][kumi][lane].sp150);
                   this.response[shumoku][kumi][lane].lap150=self.getTimeDiff(this.response[shumoku][kumi][lane].sp150,this.response[shumoku][kumi][lane].sp100);
+                  console.log(this.response[shumoku][kumi][lane].lap100);
                 }
               }
             }
