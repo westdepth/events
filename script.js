@@ -9,6 +9,14 @@ new Vue({
     clicked: function() {
       this.message = "Hello GAS!"
     },
+    getTimeDiff: function(timestr1,timestr2){
+      if(timestr1==""){
+          return "";
+      }else{
+          var msec = (parseInt(timestr1.substr(0,1))*6000+parseInt(timestr1.substr(2,2))*100+parseInt(timestr1.substr(5,2)))- (parseInt(timestr2.substr(0,1))*6000+parseInt(timestr2.substr(2,2))*100+parseInt(timestr2.substr(5,2)));
+          return "(" + Math.floor(msec/6000) + ":" + Math.floor((msec-Math.floor(msec/6000)*6000)/100) +"."+(msec-Math.floor(msec/100)*100)+")";
+      }
+    },
     getData: function(){
       this.loading=true;
       var self = this
@@ -25,6 +33,11 @@ new Vue({
               console.log(shumoku);
               for(var kumi in this.response[shumoku]){
                 console.log(""+kumi+"組");
+                for(var lane in this.response[shumoku][kumi]){
+                  this.response[shumoku][kumi][lane].lap100=getTimeDiff(this.response[shumoku][kumi][lane].sp100,this.response[shumoku][kumi][lane].sp50);
+                  this.response[shumoku][kumi][lane].lap150=getTimeDiff(this.response[shumoku][kumi][lane].sp150,this.response[shumoku][kumi][lane].sp100);
+                  this.response[shumoku][kumi][lane].lap200=getTimeDiff(this.response[shumoku][kumi][lane].sp200,this.response[shumoku][kumi][lane].sp150);
+                }
               }
             }
 
