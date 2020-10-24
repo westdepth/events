@@ -21,9 +21,7 @@ new Vue({
           console.log("2")
           if(this.response)
           {
-            forEach((item, i) => {
 
-            });
 
             self.all = this.response
             self.loading=false;
