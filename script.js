@@ -24,7 +24,7 @@ new Vue({
 
 
             self.all = this.response
-            self.loading=false;
+            //self.loading=false;
             console.log(this.response);
           }
         }
