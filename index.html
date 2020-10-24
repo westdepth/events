@@ -11,7 +11,7 @@
 <body>
 <div>
   <div id="app">
-    <b-navbar fixed="top" variant="dark" type="dark">
+    <b-navbar fixed="top" variant="info" type="dark">
     <b-navbar-brand href="#">超速報 - 関国OB2020</b-navbar-brand>
     <b-navbar-nav class="ml-auto"></b-navbar-nav>
     </b-navbar>
@@ -19,7 +19,7 @@
       <b-list-group>
           <template v-for="(shumokudata, shumoku) in all">
             <template v-for="(kumidata, kumi) in shumokudata">
-              <b-list-group-item class="sticky-top bg-primary text-white" style="top:56px;border-top-left-radius:none;border-top-right-radius:none;">{{ shumoku }} {{ kumi }}組</b-list-group-item>
+              <b-list-group-item class="sticky-top bg-light text-white" style="top:56px;border-top-left-radius:none;border-top-right-radius:none;">{{ shumoku }} {{ kumi }}組</b-list-group-item>
               <b-list-group-item v-for="dat in kumidata" class="d-flex align-items-stretch justify-content-between">
                 <div class="">
                   {{ dat.name }}<br>
