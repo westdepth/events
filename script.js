@@ -29,7 +29,7 @@ new Vue({
           //console.log("2")
           if(this.response)
           {
-            self.all = this.response
+            self.all = JSON.parse(JSON.stringify(this.response));
             for(var shumoku in self.all){
               console.log(shumoku);
               for(var kumi in self.all[shumoku]){
