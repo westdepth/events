@@ -23,7 +23,7 @@ new Vue({
           {
             for(var shumoku in this.response){
               console.log(shumoku);
-              for(var kumi in shumoku){
+              for(var kumi in this.response[shumoku]){
                 console.log(""+kumi+"組");
               }
             }
