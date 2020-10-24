@@ -24,7 +24,8 @@
     </svg></b-nav-item>
     </b-navbar-nav>
     </b-navbar>
-    <div style="padding-top:56px;">
+    <div v-if="loading"><b-spinner label="Loading..." variant="info"></b-spinner></div>
+    <div v-else style="padding-top:56px;">
       <b-list-group>
           <template v-for="(shumokudata, shumoku) in all">
             <template v-for="(kumidata, kumi) in shumokudata">
