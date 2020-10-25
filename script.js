@@ -111,4 +111,4 @@ new Vue({
       return (isdiv) ? alldiv : allrelay;
     }
   }
-);
+});
