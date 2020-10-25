@@ -47,7 +47,7 @@ new Vue({
                   if(kojin.univ!="" && kojin.grad!="" && kojin.grad!=0){
                     kojin.univgrad="("+kojin.univ+":"+kojin.grad+")";
                   }else if (kojin.univ!="" || (kojin.grad!="" && kojin.grad!=0)) {
-                    kojin.univgrad="("+kojin.univ+kojin.grad")";
+                    kojin.univgrad="("+kojin.univ+kojin.grad+")";
                   }else {
                     kojin.univgrad="(-)";
                   }
