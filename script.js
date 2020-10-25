@@ -71,7 +71,7 @@ new Vue({
               }
             }
             self.loadingdiv=false;
-            console.log(this.alldiv);
+            console.log(self.alldiv);
           }
         }
       }
@@ -118,7 +118,7 @@ new Vue({
               }
             }
             self.loadingrelay=false;
-            console.log(this.allrelay);
+            console.log(self.allrelay);
           }
         }
       }
