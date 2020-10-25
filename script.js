@@ -9,6 +9,9 @@ new Vue({
     alldiv:{}
   },
   methods: {
+    swithdiv: function(){
+      this.isdiv = !this.isdiv;
+    }
     clicked: function() {
       this.message = "Hello GAS!"
     },
@@ -114,6 +117,9 @@ new Vue({
     },
     disp: function(){
       return (this.isdiv) ? "個人" : "リレー";
+    },
+    undisp: function(){
+      return (this.isdiv) ? "リレー" : "個人";
     }
   }
 });
