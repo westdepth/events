@@ -111,6 +111,9 @@ new Vue({
     },
     all: function(){
       return (this.isdiv) ? this.alldiv : this.allrelay;
+    },
+    disp: function(){
+      return (this.isdiv) ? "個人" : "リレー";
     }
   }
 });
