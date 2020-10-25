@@ -10,7 +10,7 @@ new Vue({
   },
   methods: {
     swithdiv: function(){
-      this.isdiv = !this.isdiv;
+      this.isdiv = !(this.isdiv);
     },
     clicked: function() {
       this.message = "Hello GAS!"
