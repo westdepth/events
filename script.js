@@ -24,7 +24,7 @@ new Vue({
       }
     },
     getData: function(){
-      if(isdiv){
+      if(this.isdiv){
         getDiv();
         getRelay();
       }else {
