@@ -24,6 +24,15 @@ new Vue({
       }
     },
     getData: function(){
+      if(isdiv){
+        getDiv();
+        getRelay();
+      }else {
+        getRelay();
+        getDiv();
+      }
+    },
+    getDiv: function(){
       this.loadingdiv=true;
       var self = this
       var xmlHttpRequest = new XMLHttpRequest();
@@ -89,12 +98,22 @@ new Vue({
                 console.log(""+kumi+"組");
                 console.log(self.allrelay[shumoku][kumi]);
                 for(var lane in self.allrelay[shumoku][kumi]){
-                  console.log("hello");
-                  console.log(self.allrelay[shumoku][kumi][lane].name);
-                  self.allrelay[shumoku][kumi][lane].lap100=self.getTimeDiff(self.allrelay[shumoku][kumi][lane].sp100,self.allrelay[shumoku][kumi][lane].sp50);
-                  self.allrelay[shumoku][kumi][lane].lap200=self.getTimeDiff(self.allrelay[shumoku][kumi][lane].sp200,self.allrelay[shumoku][kumi][lane].sp150);
-                  self.allrelay[shumoku][kumi][lane].lap150=self.getTimeDiff(self.allrelay[shumoku][kumi][lane].sp150,self.allrelay[shumoku][kumi][lane].sp100);
-                  console.log(self.allrelay[shumoku][kumi][lane].lap100);
+                  var kojin = self.allrelay[shumoku][kumi][lane];
+                  console.log(kojin.name);
+                  kojin.lap100=self.getTimeDiff(kojin.sp100,kojin.sp50);
+                  kojin.lap200=self.getTimeDiff(kojin.sp200,kojin.sp150);
+                  kojin.lap150=self.getTimeDiff(kojin.sp150,kojin.sp100);
+                  if(kojin.univ!="" && kojin.grad!="" && kojin.grad!="0"){
+                    kojin.univgrad="("+kojin.univ+":"+kojin.grad+")";
+                  }else if (kojin.univ!="" || (kojin.grad!="" && kojin.grad!="0")) {
+                    kojin.univgrad="("+kojin.univ+kojin.grad+")";
+                  }else {
+                    kojin.univgrad="(-)";
+                  }
+                  if(kojin.name==""){
+                    kojin.name="名無しチーム";
+                  }
+                  console.log(kojin.lap100);
                 }
               }
             }
@@ -103,6 +122,9 @@ new Vue({
           }
         }
       }
+      xmlHttpRequest.open('GET', 'https://script.googleusercontent.com/macros/echo?user_content_key=QWM1gjVOHexAw57l4InpI1LEVgphIkVItPbzUT5R00Nz6sOJ0DJdP05O--URLl5iIyGpjcVF1CmRXEyhf_Zpbyj13ot6XbONm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnMM_m-PkPO14CPt9j2-Ns5MXsMcyTVS2R6qjJeeSma99A6fnhnYWS0v3m5YP8pexOgbU2IR2KBMQ&lib=Mr5SKryE30Nu39veDFTfkPj5oFVHBR1QH',true);
+      xmlHttpRequest.responseType = 'json';
+      xmlHttpRequest.send(null);
     }
   },
   created: function(){
