@@ -46,13 +46,13 @@ new Vue({
           {
             self.alldiv = JSON.parse(JSON.stringify(this.response));
             for(var shumoku in self.alldiv){
-              console.log(shumoku);
+              //console.log(shumoku);
               for(var kumi in self.alldiv[shumoku]){
-                console.log(""+kumi+"組");
-                console.log(self.alldiv[shumoku][kumi]);
+                //console.log(""+kumi+"組");
+                //console.log(self.alldiv[shumoku][kumi]);
                 for(var lane in self.alldiv[shumoku][kumi]){
                   var kojin = self.alldiv[shumoku][kumi][lane];
-                  console.log(kojin.name);
+                  //console.log(kojin.name);
                   kojin.lap100=self.getTimeDiff(kojin.sp100,kojin.sp50);
                   kojin.lap200=self.getTimeDiff(kojin.sp200,kojin.sp150);
                   kojin.lap150=self.getTimeDiff(kojin.sp150,kojin.sp100);
@@ -66,7 +66,7 @@ new Vue({
                   if(kojin.name==""){
                     kojin.name="名無しさん";
                   }
-                  console.log(kojin.lap100);
+                  //console.log(kojin.lap100);
                 }
               }
             }
@@ -93,13 +93,13 @@ new Vue({
           {
             self.allrelay = JSON.parse(JSON.stringify(this.response));
             for(var shumoku in self.allrelay){
-              console.log(shumoku);
+              //console.log(shumoku);
               for(var kumi in self.allrelay[shumoku]){
-                console.log(""+kumi+"組");
-                console.log(self.allrelay[shumoku][kumi]);
+                //console.log(""+kumi+"組");
+                //console.log(self.allrelay[shumoku][kumi]);
                 for(var lane in self.allrelay[shumoku][kumi]){
                   var kojin = self.allrelay[shumoku][kumi][lane];
-                  console.log(kojin.name);
+                  //console.log(kojin.name);
                   kojin.lap100=self.getTimeDiff(kojin.sp100,kojin.sp50);
                   kojin.lap200=self.getTimeDiff(kojin.sp200,kojin.sp150);
                   kojin.lap150=self.getTimeDiff(kojin.sp150,kojin.sp100);
@@ -113,7 +113,7 @@ new Vue({
                   if(kojin.name==""){
                     kojin.name="名無しチーム";
                   }
-                  console.log(kojin.lap100);
+                  //console.log(kojin.lap100);
                 }
               }
             }
