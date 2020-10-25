@@ -51,6 +51,9 @@ new Vue({
                   }else {
                     kojin.univgrad="(-)";
                   }
+                  if(kojin.name==""){
+                    kojin.name="名無しさん";
+                  }
                   console.log(kojin.lap100);
                 }
               }
