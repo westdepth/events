@@ -97,6 +97,7 @@ new Vue({
             console.log(this.allrelay);
           }
         }
+      }
     }
   },
   created: function(){
@@ -110,4 +111,4 @@ new Vue({
       return (isdiv) ? alldiv : allrelay;
     }
   }
-});
+);
