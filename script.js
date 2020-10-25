@@ -25,11 +25,11 @@ new Vue({
     },
     getData: function(){
       if(this.isdiv){
-        getDiv();
-        getRelay();
+        this.getDiv();
+        this.getRelay();
       }else {
-        getRelay();
-        getDiv();
+        this.getRelay();
+        this.getDiv();
       }
     },
     getDiv: function(){
