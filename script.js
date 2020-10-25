@@ -104,10 +104,10 @@ new Vue({
   },
   computed:{
     loading: function(){
-      return (isdiv) ? loadingdiv : loadingrelay;
+      return (this.isdiv) ? this.loadingdiv : this.loadingrelay;
     },
     all: function(){
-      return (isdiv) ? alldiv : allrelay;
+      return (this.isdiv) ? this.alldiv : this.allrelay;
     }
   }
 });
