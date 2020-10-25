@@ -44,9 +44,9 @@ new Vue({
                   kojin.lap100=self.getTimeDiff(kojin.sp100,kojin.sp50);
                   kojin.lap200=self.getTimeDiff(kojin.sp200,kojin.sp150);
                   kojin.lap150=self.getTimeDiff(kojin.sp150,kojin.sp100);
-                  if(kojin.univ!="" && kojin.grad!="" && kojin.grad!=0){
+                  if(kojin.univ!="" && kojin.grad!="" && kojin.grad!="0"){
                     kojin.univgrad="("+kojin.univ+":"+kojin.grad+")";
-                  }else if (kojin.univ!="" || (kojin.grad!="" && kojin.grad!=0)) {
+                  }else if (kojin.univ!="" || (kojin.grad!="" && kojin.grad!="0")) {
                     kojin.univgrad="("+kojin.univ+kojin.grad+")";
                   }else {
                     kojin.univgrad="(-)";
