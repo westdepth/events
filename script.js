@@ -51,7 +51,6 @@ new Vue({
                   }else {
                     kojin.univgrad="(-)";
                   }
-                  kojin.univgrad=kojin.
                   console.log(kojin.lap100);
                 }
               }
