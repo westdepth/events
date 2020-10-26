@@ -66,7 +66,7 @@ new Vue({
                   if(kojin.name==""){
                     kojin.name="名無しさん";
                   }else{
-                    kojin.nameAry={kojin.name};
+                    kojin.nameAry=[kojin.name];
                   }
                   //console.log(kojin.lap100);
                 }
