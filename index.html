@@ -40,16 +40,16 @@
             <template v-for="(kumidata, kumi) in shumokudata">
               <b-list-group-item class="sticky-top bg-light" style="top:56px;border-top-left-radius:0;border-top-right-radius:0;">{{ shumoku }} {{ kumi }}組</b-list-group-item>
               <b-list-group-item v-for="(dat, lane) in kumidata" class="d-flex align-items-stretch justify-content-between">
-                <div style="padding-rignt:20px;">
-                  <div class="d-flex align-items-stretch bg-light">{{lane}}</div>
-                  <div class="d-flex"><span class="commalist"><span v-for="nm in dat.nameAry">{{nm}}</span></span></div>
-                  <div class="d-flex"><span style="font-size:12px;">{{ dat.univgrad }}</span></div>
+                <div style="padding-rignt:20px;"> <!--左ブロックここから-->
+                  <div class="align-items-stretch bg-light">{{lane}}</div>
+                  <div class=""><span class="commalist"><span v-for="nm in dat.nameAry">{{nm}}</span></span></div>
+                  <div class=""><span style="font-size:12px;">{{ dat.univgrad }}</span></div>
                 </div>
-                <div class="d-flex flex-column">
-                  <div class="d-flex" style="font-size:12px;">
+                <div class="flex-column"> <!--右ブロックここから-->
+                  <div class="" style="font-size:12px;">
                     {{ dat.sp50 }}<br>{{dat.sp100}}{{dat.lap100}}<br>{{dat.sp150}}{{dat.lap150}}<br>{{dat.sp200}}{{dat.lap200}}
                   </div>
-                  <div class="d-flex">
+                  <div class="">
                     {{dat.time}}<span style="font-size:12px;">({{dat.ent}})</span>
                   </div>
                 </div>
