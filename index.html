@@ -7,7 +7,6 @@
     <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
     <style type="text/css">
       <!--
-      .list-group-item {padding:0;}
       .list-group-item > div {padding:.75rem 1.25rem;}
       .commalist > span {display:inline-block;}
       .commalist > span:after {content:", "}
@@ -44,13 +43,13 @@
           <template v-for="(shumokudata, shumoku) in all">
             <template v-for="(kumidata, kumi) in shumokudata">
               <b-list-group-item class="sticky-top bg-light" style="top:56px;border-top-left-radius:0;border-top-right-radius:0;">{{ shumoku }} {{ kumi }}組</b-list-group-item>
-              <b-list-group-item v-for="(dat, lane) in kumidata" class="d-flex align-items-stretch justify-content-between">
+              <b-list-group-item v-for="(dat, lane) in kumidata" class="d-flex align-items-stretch justify-content-between" style="padding:0;">
                 <div class="bg-light">{{lane}}</div>
                 <div class="flex-grow-1" style="padding-rignt:20px;"> <!--左ブロックここから-->
                   <div class=""><span class="commalist"><span v-for="nm in dat.nameAry">{{nm}}</span></span></div>
                   <div class=""><span style="font-size:12px;">{{ dat.univgrad }}</span></div>
                 </div>
-                <div class="flex-column"> <!--右ブロックここから-->
+                <div class="flex-column" style="width:120px"> <!--右ブロックここから-->
                   <div class="" style="font-size:12px;">
                     {{ dat.sp50 }}<br>{{dat.sp100}}{{dat.lap100}}<br>{{dat.sp150}}{{dat.lap150}}<br>{{dat.sp200}}{{dat.lap200}}
                   </div>
