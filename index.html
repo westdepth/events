@@ -38,7 +38,7 @@
               <b-list-group-item class="sticky-top bg-light" style="top:56px;border-top-left-radius:0;border-top-right-radius:0;">{{ shumoku }} {{ kumi }}組</b-list-group-item>
               <b-list-group-item v-for="(dat, lane) in kumidata" class="d-flex align-items-stretch justify-content-between">
                 <div class="">
-                  {{lane}}レーン：{{ dat.name }}<br>
+                  {{lane}}レーン：<span v-for="nm in dat.nameAry">{{nm}}</span><br>
                   <span style="font-size:12px;">{{ dat.univgrad }}</span>
                 </div>
                 <div class="d-flex flex-column">
