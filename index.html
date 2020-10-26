@@ -2,8 +2,13 @@
 <html style="height:100%">
   <head>
     <meta name=viewport content="width=device-width,initial-scale=1">
+    <!-- Load required Bootstrap and BootstrapVue CSS -->
+    <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
     <style type="text/css">
       <!--
+      .list-group-item {padiing:0;}
+      .list-group-item > div {padding:.75rem 1.25rem;}
       .commalist > span {display:inline-block;}
       .commalist > span:after {content:", "}
       .commalist span:last-child:after{content:"";}
@@ -61,9 +66,6 @@
 
   </div>
 </div>
-<!-- Load required Bootstrap and BootstrapVue CSS -->
-<link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
-<link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
 
 <!-- Load polyfills to support older browsers -->
 <script src="//polyfill.io/v3/polyfill.min.js?features=es2015%2CIntersectionObserver" crossorigin="anonymous"></script>
