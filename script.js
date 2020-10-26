@@ -112,6 +112,8 @@ new Vue({
                   }
                   if(kojin.name==""){
                     kojin.name="名無しチーム";
+                  }else{
+                    kojin.nameAry=kojin.name.split(', ');
                   }
                   //console.log(kojin.lap100);
                 }
