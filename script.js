@@ -64,7 +64,7 @@ new Vue({
                     kojin.univgrad="(-)";
                   }
                   if(kojin.name==""){
-                    kojin.nameAry={"名無しさん"};
+                    kojin.nameAry=["名無しさん"];
                   }else{
                     kojin.nameAry=[kojin.name];
                   }
@@ -113,7 +113,7 @@ new Vue({
                     kojin.univgrad="(-)";
                   }
                   if(kojin.name==""){
-                    kojin.nameAry={"名無しチーム"};
+                    kojin.nameAry=["名無しチーム"];
                   }else{
                     kojin.nameAry=kojin.name.split(', ');
                   }
