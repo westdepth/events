@@ -7,6 +7,7 @@
     <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
     <style type="text/css">
       <!--
+      div.timelist{font-size:0.75rem;}
       .list-group-item > div {padding:.75rem 1.25rem;}
       span.nobr {display:inline-block;}
       .commalist > span:after {content:", "}
@@ -55,7 +56,7 @@
                     <span key="kiken">棄権</span>
                   </div></template>
                   <template v-else>
-                    <div class="timelist" style="font-size:12px;">
+                    <div class="timelist">
                       <span v-if="dat.sp50!=''">{{ dat.sp50 }}</span><br/>
                       <span v-if="dat.sp100!=''">{{dat.sp100}}<span style="font-size:12px;">{{dat.lap100}}</span></span><br/>
                       <span v-if="dat.sp150!=''">{{dat.sp150}}<span style="font-size:12px;">{{dat.lap150}}</span></span><br/>
