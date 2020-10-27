@@ -11,6 +11,7 @@
       span.nobr {display:inline-block;}
       .commalist > span:after {content:", "}
       .commalist span:last-child:after{content:"";}
+      .timelist span:last-child{font-size:1rem;}
       /*.f-container{display:flex;}*/
       -->
     </style>
@@ -53,7 +54,7 @@
                   <div v-if="dat.time==='DNS'">
                     <span>棄権</span>
                   </div>
-                  <div v-else class="" style="font-size:12px;">
+                  <div v-if="dat.time!=='DNS'" class="timelist" style="font-size:12px;">
                     <span>{{ dat.sp50 }}</span><br/>
                     <span>{{dat.sp100}}<span style="font-size:12px;">{{dat.lap100}}</span></span><br/>
                     <span>{{dat.sp150}}<span style="font-size:12px;">{{dat.lap150}}</span></span><br/>
