@@ -12,7 +12,7 @@
       span.nobr {display:inline-block;}
       .commalist > span:after {content:", "}
       .commalist span:last-child:after{content:"";}
-      .timelist > span:last-child{font-size:1rem;}
+      .timelist > span:last-of-type {font-size:1rem;}
       /*.f-container{display:flex;}*/
       -->
     </style>
@@ -58,12 +58,12 @@
                   <template v-else>
                     <div class="timelist">
                       <span v-if="dat.sp50!=''">{{ dat.sp50 }}</span><br/>
-                      <span v-if="dat.sp100!=''">{{dat.sp100}}<span style="font-size:12px;">{{dat.lap100}}</span></span><br/>
-                      <span v-if="dat.sp150!=''">{{dat.sp150}}<span style="font-size:12px;">{{dat.lap150}}</span></span><br/>
-                      <span v-if="dat.sp200!=''">{{dat.sp200}}<span style="font-size:12px;">{{dat.lap200}}</span></span>
+                      <span v-if="dat.sp100!=''">{{dat.sp100}}<span style="font-size:0.75rem;">{{dat.lap100}}</span></span><br/>
+                      <span v-if="dat.sp150!=''">{{dat.sp150}}<span style="font-size:0.75rem;">{{dat.lap150}}</span></span><br/>
+                      <span v-if="dat.sp200!=''">{{dat.sp200}}<span style="font-size:0.75rem;">{{dat.lap200}}</span></span>
                     </div>
                     <div class="">
-                      {{dat.time}}<span style="font-size:12px;">({{dat.ent}})</span>
+                      {{dat.time}}<span style="font-size:0.75rem;">({{dat.ent}})</span>
                     </div>
                   </template>
                 </div>
