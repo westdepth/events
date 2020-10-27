@@ -56,10 +56,10 @@
                   </div></template>
                   <template v-else>
                     <div class="timelist" style="font-size:12px;">
-                      <span v-if="dat.sp50==''">{{ dat.sp50 }}</span><br/>
-                      <span v-if="dat.sp100==''">{{dat.sp100}}<span style="font-size:12px;">{{dat.lap100}}</span></span><br/>
-                      <span v-if="dat.sp150==''">{{dat.sp150}}<span style="font-size:12px;">{{dat.lap150}}</span></span><br/>
-                      <span v-if="dat.sp200==''">{{dat.sp200}}<span style="font-size:12px;">{{dat.lap200}}</span></span>
+                      <span v-if="dat.sp50!=''">{{ dat.sp50 }}</span><br/>
+                      <span v-if="dat.sp100!=''">{{dat.sp100}}<span style="font-size:12px;">{{dat.lap100}}</span></span><br/>
+                      <span v-if="dat.sp150!=''">{{dat.sp150}}<span style="font-size:12px;">{{dat.lap150}}</span></span><br/>
+                      <span v-if="dat.sp200!=''">{{dat.sp200}}<span style="font-size:12px;">{{dat.lap200}}</span></span>
                     </div>
                     <div class="">
                       {{dat.time}}<span style="font-size:12px;">({{dat.ent}})</span>
