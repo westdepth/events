@@ -51,10 +51,10 @@
                   <div class=""><span style="font-size:12px;">{{ dat.univgrad }}</span></div>
                 </div>
                 <div class="flex-column" style="width:120px"> <!--右ブロックここから-->
-                  <div v-if="dat.time==='DNS'">
+                  <div v-if="dat.time=='DNS'">
                     <span>棄権</span>
                   </div>
-                  <div v-if="dat.time!=='DNS'" class="timelist" style="font-size:12px;">
+                  <div v-if="dat.time!='DNS'" class="timelist" style="font-size:12px;">
                     <span>{{ dat.sp50 }}</span><br/>
                     <span>{{dat.sp100}}<span style="font-size:12px;">{{dat.lap100}}</span></span><br/>
                     <span>{{dat.sp150}}<span style="font-size:12px;">{{dat.lap150}}</span></span><br/>
