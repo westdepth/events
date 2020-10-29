@@ -23,7 +23,7 @@ new Vue({
           return "(" + Math.floor(msec/6000) + ":" + Math.floor((msec-Math.floor(msec/6000)*6000)/100) +"."+(msec-Math.floor(msec/100)*100)+")";
       }
     },
-    : function(arrayData, dlmt){
+    getStringList: function(arrayData, dlmt){
       dim tmp = "";
       arrayData.forEach((str, i) => {
         if(str!=""){
