@@ -69,7 +69,7 @@ new Vue({
                   kojin.lap100=self.getTimeDiff(kojin.sp100,kojin.sp50);
                   kojin.lap200=self.getTimeDiff(kojin.sp200,kojin.sp150);
                   kojin.lap150=self.getTimeDiff(kojin.sp150,kojin.sp100);
-                  kojin.univgrad = getStringList([kojin.univ, kojin.grad, kojin.class],"：");
+                  kojin.univgrad = self.getStringList([kojin.univ, kojin.grad, kojin.class],"：");
                   /*var tmp = "";
                   if(kojin.univ!=""){
                     tmp = kojin.univ;
@@ -136,7 +136,7 @@ new Vue({
                   kojin.lap100=self.getTimeDiff(kojin.sp100,kojin.sp50);
                   kojin.lap200=self.getTimeDiff(kojin.sp200,kojin.sp150);
                   kojin.lap150=self.getTimeDiff(kojin.sp150,kojin.sp100);
-                  kojin.univgrad = getStringList([kojin.univ, kojin.grad, kojin.class],"：");
+                  kojin.univgrad = self.getStringList([kojin.univ, kojin.grad, kojin.class],"：");
                   /*var tmp = "";
                   if(kojin.univ!=""){
                     tmp = kojin.univ;
