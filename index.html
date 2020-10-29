@@ -50,6 +50,9 @@
                 <div class="flex-grow-1" style="padding-rignt:20px;min-width:120px"> <!--左ブロックここから-->
                   <div class=""><span class="commalist"><span v-for="nm in dat.nameAry" class="nobr">{{nm}}</span></span></div>
                   <div class=""><span style="font-size:12px;">{{ dat.univgrad }}</span></div>
+                  <div class="">
+                    <span style="font-size:0.75rem;">エントリータイム&nbsp;:&nbsp;{{dat.ent}}</span>
+                  </div>
                 </div>
                 <div class="flex-column" style="width:140px"> <!--右ブロックここから-->
                   <template v-if="dat.time==='DNS'"><div>
@@ -61,9 +64,6 @@
                       <span v-if="dat.sp100!=''">{{dat.sp100}}<span style="font-size:0.75rem;">&nbsp;{{dat.lap100}}</span></span><br/>
                       <span v-if="dat.sp150!=''">{{dat.sp150}}<span style="font-size:0.75rem;">&nbsp;{{dat.lap150}}</span></span><br/>
                       <span v-if="dat.sp200!=''">{{dat.sp200}}<span style="font-size:0.75rem;">&nbsp;{{dat.lap200}}</span></span>
-                    </div>
-                    <div class="">
-                      {{dat.time}}<span style="font-size:0.75rem;">({{dat.ent}})</span>
                     </div>
                   </template>
                 </div>
