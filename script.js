@@ -56,12 +56,29 @@ new Vue({
                   kojin.lap100=self.getTimeDiff(kojin.sp100,kojin.sp50);
                   kojin.lap200=self.getTimeDiff(kojin.sp200,kojin.sp150);
                   kojin.lap150=self.getTimeDiff(kojin.sp150,kojin.sp100);
-                  if(kojin.univ!="" && kojin.grad!="" && kojin.grad!="0"){
-                    kojin.univgrad="("+kojin.univ+":"+kojin.grad+")";
-                  }else if (kojin.univ!="" || (kojin.grad!="" && kojin.grad!="0")) {
-                    kojin.univgrad="("+kojin.univ+kojin.grad+")";
-                  }else {
-                    kojin.univgrad="(-)";
+                  var tmp = "";
+                  if(kojin.univ!=""){
+                    tmp = kojin.univ;
+                  }
+                  if(kojin.grad!=""){
+                    if(tmp!=""){
+                      tmp = tmp + "：" + kojin.grad;
+                    }else{
+                      tmp = kojin.grad;
+                    }
+                  }
+                  if(kojin.class!=""){
+                    if(tmp!=""){
+                      kojin.univgrad = "(" + tmp + "：" + kojin.class + ")";
+                    }else{
+                      kojin.univgrad = "(" + kojin.class + ")";
+                    }
+                  }else{
+                    if(tmp!=""){
+                      kojin.univgrad = "(" + tmp + ")";
+                    }else {
+                      kojin.univgrad = "";
+                    }
                   }
                   if(kojin.name==""){
                     kojin.nameAry=["名無しさん"];
@@ -105,12 +122,29 @@ new Vue({
                   kojin.lap100=self.getTimeDiff(kojin.sp100,kojin.sp50);
                   kojin.lap200=self.getTimeDiff(kojin.sp200,kojin.sp150);
                   kojin.lap150=self.getTimeDiff(kojin.sp150,kojin.sp100);
-                  if(kojin.univ!="" && kojin.grad!="" && kojin.grad!="0"){
-                    kojin.univgrad="("+kojin.univ+":"+kojin.grad+")";
-                  }else if (kojin.univ!="" || (kojin.grad!="" && kojin.grad!="0")) {
-                    kojin.univgrad="("+kojin.univ+kojin.grad+")";
-                  }else {
-                    kojin.univgrad="(-)";
+                  var tmp = "";
+                  if(kojin.univ!=""){
+                    tmp = kojin.univ;
+                  }
+                  if(kojin.grad!=""){
+                    if(tmp!=""){
+                      tmp = tmp + "：" + kojin.grad;
+                    }else{
+                      tmp = kojin.grad;
+                    }
+                  }
+                  if(kojin.class!=""){
+                    if(tmp!=""){
+                      kojin.univgrad = "(" + tmp + "：" + kojin.class + ")";
+                    }else{
+                      kojin.univgrad = "(" + kojin.class + ")";
+                    }
+                  }else{
+                    if(tmp!=""){
+                      kojin.univgrad = "(" + tmp + ")";
+                    }else {
+                      kojin.univgrad = "";
+                    }
                   }
                   if(kojin.name==""){
                     kojin.nameAry=["名無しチーム"];
