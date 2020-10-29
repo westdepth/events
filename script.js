@@ -3,7 +3,6 @@ new Vue({
   data: {
     loadingdiv:true,
     loadingrelay:true,
-    message: 'Hello Vue.js!',
     isdiv:true,
     allrelay:{},
     alldiv:{}
@@ -11,9 +10,6 @@ new Vue({
   methods: {
     swithdiv: function(){
       this.isdiv = !(this.isdiv);
-    },
-    clicked: function() {
-      this.message = "Hello GAS!"
     },
     getTimeDiff: function(timestr1,timestr2){
       if(timestr1==""){
@@ -35,6 +31,14 @@ new Vue({
         }
       });
       return tmp;
+    },
+    toggleShow: function(shumoku, kumi){
+      //表示しているものを開閉切り替え対象にしているのでちょっと筋が悪い
+      if(isdiv){
+        this.alldiv[shumoku][kumi].show = !this.alldiv[shumoku][kumi].show;
+      }else{
+        this.allrelay[shumoku][kumi].show = !this.allrelay[shumoku][kumi].show;
+      }
     },
     getData: function(){
       if(this.isdiv){
@@ -63,6 +67,7 @@ new Vue({
               for(var kumi in self.alldiv[shumoku]){
                 //console.log(""+kumi+"組");
                 //console.log(self.alldiv[shumoku][kumi]);
+                self.alldiv[shumoku][kumi].show = false;
                 for(var lane in self.alldiv[shumoku][kumi]){
                   var kojin = self.alldiv[shumoku][kumi][lane];
                   //console.log(kojin.name);
@@ -70,30 +75,6 @@ new Vue({
                   kojin.lap200=self.getTimeDiff(kojin.sp200,kojin.sp150);
                   kojin.lap150=self.getTimeDiff(kojin.sp150,kojin.sp100);
                   kojin.univgrad = self.getStringList([kojin.univ, kojin.grad, kojin.class],"：");
-                  /*var tmp = "";
-                  if(kojin.univ!=""){
-                    tmp = kojin.univ;
-                  }
-                  if(kojin.grad!=""){
-                    if(tmp!=""){
-                      tmp = tmp + "：" + kojin.grad;
-                    }else{
-                      tmp = kojin.grad;
-                    }
-                  }
-                  if(kojin.class!=""){
-                    if(tmp!=""){
-                      kojin.univgrad = "(" + tmp + "：" + kojin.class + ")";
-                    }else{
-                      kojin.univgrad = "(" + kojin.class + ")";
-                    }
-                  }else{
-                    if(tmp!=""){
-                      kojin.univgrad = "(" + tmp + ")";
-                    }else {
-                      kojin.univgrad = "";
-                    }
-                  }*/
                   if(kojin.name==""){
                     kojin.nameAry=["名無しさん"];
                   }else{
@@ -130,6 +111,7 @@ new Vue({
               for(var kumi in self.allrelay[shumoku]){
                 //console.log(""+kumi+"組");
                 //console.log(self.allrelay[shumoku][kumi]);
+                self.alldiv[shumoku][kumi].show = false;
                 for(var lane in self.allrelay[shumoku][kumi]){
                   var kojin = self.allrelay[shumoku][kumi][lane];
                   //console.log(kojin.name);
@@ -137,30 +119,6 @@ new Vue({
                   kojin.lap200=self.getTimeDiff(kojin.sp200,kojin.sp150);
                   kojin.lap150=self.getTimeDiff(kojin.sp150,kojin.sp100);
                   kojin.univgrad = self.getStringList([kojin.univ, kojin.grad, kojin.class],"：");
-                  /*var tmp = "";
-                  if(kojin.univ!=""){
-                    tmp = kojin.univ;
-                  }
-                  if(kojin.grad!=""){
-                    if(tmp!=""){
-                      tmp = tmp + "：" + kojin.grad;
-                    }else{
-                      tmp = kojin.grad;
-                    }
-                  }
-                  if(kojin.class!=""){
-                    if(tmp!=""){
-                      kojin.univgrad = "(" + tmp + "：" + kojin.class + ")";
-                    }else{
-                      kojin.univgrad = "(" + kojin.class + ")";
-                    }
-                  }else{
-                    if(tmp!=""){
-                      kojin.univgrad = "(" + tmp + ")";
-                    }else {
-                      kojin.univgrad = "";
-                    }
-                  }*/
                   if(kojin.name==""){
                     kojin.nameAry=["名無しチーム"];
                   }else{
