@@ -23,6 +23,19 @@ new Vue({
           return "(" + Math.floor(msec/6000) + ":" + Math.floor((msec-Math.floor(msec/6000)*6000)/100) +"."+(msec-Math.floor(msec/100)*100)+")";
       }
     },
+    : function(arrayData, dlmt){
+      dim tmp = "";
+      arrayData.forEach((str, i) => {
+        if(str!=""){
+          if(tmp!=""){
+            tmp = tmp + dlmt + str;
+          }else{
+            tmp = str;
+          }
+        }
+      });
+      return tmp;
+    },
     getData: function(){
       if(this.isdiv){
         this.getDiv();
@@ -56,7 +69,8 @@ new Vue({
                   kojin.lap100=self.getTimeDiff(kojin.sp100,kojin.sp50);
                   kojin.lap200=self.getTimeDiff(kojin.sp200,kojin.sp150);
                   kojin.lap150=self.getTimeDiff(kojin.sp150,kojin.sp100);
-                  var tmp = "";
+                  kojin.univgrad = getStringList([kojin.univ, kojin.grad, kojin.class],"：");
+                  /*var tmp = "";
                   if(kojin.univ!=""){
                     tmp = kojin.univ;
                   }
@@ -79,7 +93,7 @@ new Vue({
                     }else {
                       kojin.univgrad = "";
                     }
-                  }
+                  }*/
                   if(kojin.name==""){
                     kojin.nameAry=["名無しさん"];
                   }else{
@@ -122,7 +136,8 @@ new Vue({
                   kojin.lap100=self.getTimeDiff(kojin.sp100,kojin.sp50);
                   kojin.lap200=self.getTimeDiff(kojin.sp200,kojin.sp150);
                   kojin.lap150=self.getTimeDiff(kojin.sp150,kojin.sp100);
-                  var tmp = "";
+                  kojin.univgrad = getStringList([kojin.univ, kojin.grad, kojin.class],"：");
+                  /*var tmp = "";
                   if(kojin.univ!=""){
                     tmp = kojin.univ;
                   }
@@ -145,7 +160,7 @@ new Vue({
                     }else {
                       kojin.univgrad = "";
                     }
-                  }
+                  }*/
                   if(kojin.name==""){
                     kojin.nameAry=["名無しチーム"];
                   }else{
