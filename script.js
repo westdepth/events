@@ -24,7 +24,7 @@ new Vue({
       }
     },
     getStringList: function(arrayData, dlmt){
-      dim tmp = "";
+      var tmp = "";
       arrayData.forEach((str, i) => {
         if(str!=""){
           if(tmp!=""){
