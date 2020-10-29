@@ -111,7 +111,7 @@ new Vue({
               for(var kumi in self.allrelay[shumoku]){
                 //console.log(""+kumi+"組");
                 //console.log(self.allrelay[shumoku][kumi]);
-                self.alldiv[shumoku][kumi].show = false;
+                self.allrelay[shumoku][kumi].show = false;
                 for(var lane in self.allrelay[shumoku][kumi]){
                   var kojin = self.allrelay[shumoku][kumi][lane];
                   //console.log(kojin.name);
