@@ -12,7 +12,7 @@ new Vue({
       this.isdiv = !(this.isdiv);
     },
     getTimeDiff: function(timestr1,timestr2){
-      if(timestr1==""){
+      if(timestr1=="" || timestr2==""){
           return "";
       }else{
           var msec = (parseInt(timestr1.substr(0,1))*6000+parseInt(timestr1.substr(2,2))*100+parseInt(timestr1.substr(5,2)))- (parseInt(timestr2.substr(0,1))*6000+parseInt(timestr2.substr(2,2))*100+parseInt(timestr2.substr(5,2)));
