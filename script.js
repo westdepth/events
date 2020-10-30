@@ -35,12 +35,12 @@ new Vue({
     toggleShow: function(shumoku, kumi){
       //表示しているものを開閉切り替え対象にしているのでちょっと筋が悪い
       //というか組内が配列なのがすでに筋が悪い
-      if(isdiv){
-        alldiv[shumoku][kumi].forEach((item, i) => {
+      if(this.isdiv){
+        this.alldiv[shumoku][kumi].forEach((item, i) => {
           item.show = !item.show;
         });
       }else{
-        allrelay[shumoku][kumi].forEach((item, i) => {
+        this.allrelay[shumoku][kumi].forEach((item, i) => {
           item.show = !item.show;
         });
       }
