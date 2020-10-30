@@ -41,7 +41,7 @@ new Vue({
         });
       }else{
         allrelay[shumoku][kumi].forEach((item, i) => {
-          item.show = !=item.show;
+          item.show = !item.show;
         });
       }
     },
