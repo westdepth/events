@@ -34,10 +34,15 @@ new Vue({
     },
     toggleShow: function(shumoku, kumi){
       //表示しているものを開閉切り替え対象にしているのでちょっと筋が悪い
+      //というか組内が配列なのがすでに筋が悪い
       if(isdiv){
-        this.alldiv[shumoku][kumi].show = !this.alldiv[shumoku][kumi].show;
+        alldiv[shumoku][kumi].forEach((item, i) => {
+          item.show = !item.show;
+        });
       }else{
-        this.allrelay[shumoku][kumi].show = !this.allrelay[shumoku][kumi].show;
+        allrelay[shumoku][kumi].forEach((item, i) => {
+          item.show = !=item.show;
+        });
       }
     },
     getData: function(){
@@ -67,7 +72,6 @@ new Vue({
               for(var kumi in self.alldiv[shumoku]){
                 //console.log(""+kumi+"組");
                 //console.log(self.alldiv[shumoku][kumi]);
-                self.alldiv[shumoku][kumi].show = false;
                 for(var lane in self.alldiv[shumoku][kumi]){
                   var kojin = self.alldiv[shumoku][kumi][lane];
                   //console.log(kojin.name);
@@ -80,6 +84,7 @@ new Vue({
                   }else{
                     kojin.nameAry=[kojin.name];
                   }
+                  kojin.show = false;
                   //console.log(kojin.lap100);
                 }
               }
@@ -111,7 +116,6 @@ new Vue({
               for(var kumi in self.allrelay[shumoku]){
                 //console.log(""+kumi+"組");
                 //console.log(self.allrelay[shumoku][kumi]);
-                self.allrelay[shumoku][kumi].show = false;
                 for(var lane in self.allrelay[shumoku][kumi]){
                   var kojin = self.allrelay[shumoku][kumi][lane];
                   //console.log(kojin.name);
@@ -124,6 +128,7 @@ new Vue({
                   }else{
                     kojin.nameAry=kojin.name.split(', ');
                   }
+                  kojin.show = false;
                   //console.log(kojin.lap100);
                 }
               }
