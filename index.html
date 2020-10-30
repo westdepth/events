@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html style="height:100%">
   <head>
+    <title>関国OB2020 超速報</title>
     <meta name=viewport content="width=device-width,initial-scale=1">
     <!-- Load required Bootstrap and BootstrapVue CSS -->
     <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
@@ -48,7 +49,7 @@
                 <div class="bg-light" style ="padding-right:.5rem;padding-left:.5rem">{{lane}}</div>
                 <div class="d-flex flex-column flex-grow-1" style="padding-rignt:20px;min-width:120px; line-height:1.25em;"> <!--左ブロックここから-->
                   <div class=""><span class="commalist"><span v-for="nm in dat.nameAry" class="nobr">{{nm}}</span></span></div>
-                  <div style="margin-left:.25rem;font-size:12px;line-height:.75rem;"><span style="">{{ dat.univgrad }}</span></div>
+                  <div style="font-size:12px;line-height:.75rem;"><span style="">{{ dat.univgrad }}</span></div>
                   <div class="mt-auto">
                     <span v-if="dat.time!='DNS'">TIME：{{dat.time}}</span>
                   </div>
