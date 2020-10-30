@@ -48,9 +48,9 @@
                 <div class="bg-light" style ="padding-right:.5rem;padding-left:.5rem">{{lane}}</div>
                 <div class="d-flex flex-column flex-grow-1" style="padding-rignt:20px;min-width:120px"> <!--左ブロックここから-->
                   <div class=""><span class="commalist"><span v-for="nm in dat.nameAry" class="nobr">{{nm}}</span></span></div>
-                  <div><span style="font-size:12px;">{{ dat.univgrad }}</span></div>
+                  <div style="margin-left:1rem;"><span style="font-size:12px;">{{ dat.univgrad }}</span></div>
                   <div class="mt-auto">
-                    <span v-if="dat.time!='DNS'">{{dat.time}}</span>
+                    <span v-if="dat.time!='DNS'">TIME：{{dat.time}}</span>
                   </div>
                 </div>
                 <div class="flex-column" style="width:140px"> <!--右ブロックここから-->
@@ -58,11 +58,12 @@
                     <span key="kiken">棄権</span>
                   </div></template>
                   <template v-else>
-                    <div class="timelist d-flex align-content-around flex-wrap">
-                      <span v-if="dat.sp50!=''">{{ dat.sp50 }}</span><br/>
-                      <span v-if="dat.sp100!=''">{{dat.sp100}}<span style="font-size:0.75rem;">&nbsp;{{dat.lap100}}</span></span><br/>
-                      <span v-if="dat.sp150!=''">{{dat.sp150}}<span style="font-size:0.75rem;">&nbsp;{{dat.lap150}}</span></span><br/>
-                      <span v-if="dat.sp200!=''">{{dat.sp200}}<span style="font-size:0.75rem;">&nbsp;{{dat.lap200}}</span></span>
+                    <div class="timelist d-flex flex-column">
+                      <div class="d-flex justify-content-between"><div>SPLIT</div><div style="font-size:0.75rem;">LAP</div></div>
+                      <div class="d-flex justify-content-between" v-if="dat.sp50!=''"><div>{{ dat.sp50 }}</div></div>
+                      <div class="d-flex justify-content-between" v-if="dat.sp100!=''"><div>{{dat.sp100}}</div><div style="font-size:0.75rem;">&nbsp;{{dat.lap100}}</div></div>
+                      <div class="d-flex justify-content-between" v-if="dat.sp150!=''"><div>{{dat.sp150}}</div><div style="font-size:0.75rem;">&nbsp;{{dat.lap150}}</div></div>
+                      <div class="d-flex justify-content-between" v-if="dat.sp200!=''"><div>{{dat.sp200}}</div><div style="font-size:0.75rem;">&nbsp;{{dat.lap200}}</div></div>
                     </div>
                   </template>
                 </div>
