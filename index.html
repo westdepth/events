@@ -44,7 +44,8 @@
       <b-list-group>
         <template v-for="(shumokudata, shumoku) in all">
           <template v-for="(kumidata, kumi) in shumokudata">
-              <b-list-group-item class="sticky-top bg-light" style="top:56px;border-top-left-radius:0;border-top-right-radius:0;" v-on:click="toggleShow(shumoku, kumi)">{{ shumoku }} {{ kumi }}組</b-list-group-item>
+              <b-list-group-item v-b-toggle="'c' + shumoku + kumi" class="sticky-top bg-light" style="top:56px;border-top-left-radius:0;border-top-right-radius:0;" v-on:click="">{{ shumoku }} {{ kumi }}組</b-list-group-item>
+              <b-collapse v-bind:id="'c' + shumoku + kumi">
               <b-list-group-item v-for="(dat, lane) in kumidata" class="d-flex align-items-stretch justify-content-between" style="padding:0;height:7rem;"><!個人・チームデータのボックス-->
                 <div class="bg-light" style ="padding-right:.5rem;padding-left:.5rem">{{lane}}</div>
                 <div class="d-flex flex-column flex-grow-1" style="padding-rignt:20px;min-width:120px; line-height:1.25em;"> <!--左ブロックここから-->
@@ -68,7 +69,7 @@
                     </div>
                   </template>
                 </div>
-              </b-list-group-item>
+              </b-list-group-item></b-collapse>
             </template>
           </template>
       </b-list-group>
