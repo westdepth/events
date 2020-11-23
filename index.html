@@ -17,6 +17,27 @@
       -->
     </style>
     <link rel="icon" type="image/x-icon" href="ico.png">
+    <!-- PWA設定ここから -->
+    <!-- アドレスバー等のブラウザのUIを非表示 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- default（Safariと同じ） / black（黒） / black-translucent（ステータスバーをコンテンツに含める） -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- ホーム画面に表示されるアプリ名 -->
+    <meta name="apple-mobile-web-app-title" content="こそれこ">
+    <!-- ホーム画面に表示されるアプリアイコン -->
+    <link rel="apple-touch-icon" href="icon-192x192.png">
+    <!-- ウェブアプリマニフェストの読み込み -->
+    <link rel="manifest" href="manifest.json">
+    <!-- ServiceWorkerの登録 -->
+    <script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js')
+          .then((reg) => {
+            console.log('Service worker registered.', reg);
+          });
+    }
+    </script>
+    <!-- PWA設定ここまで -->
   </head>
 <body style="height:100%">
 <div style="height:100%">
