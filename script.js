@@ -7,7 +7,7 @@
     allrelay:{},
     alldiv:{},
     allevents:["関国OB2020", "熱い記録会2021"],
-    focusevent:allevents[allevents.length-1]//基本的に一番新しいものをデフォルトのイベントとする
+    focusevent:""
   },
   methods: {
     switchEvent: function(ename){
@@ -138,6 +138,7 @@
   },
   created: function(){
     this.getData();
+    this.focusevent = this.allevents[this.allevents.length - 1];
   },
   computed:{
     loading: function(){
