@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html style="height:100%">
   <head>
-    <title>関国OB2020 超速報</title>
+    <title>こそれこ</title>
     <meta name=viewport content="width=device-width,initial-scale=1">
     <!-- Load required Bootstrap and BootstrapVue CSS -->
     <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
@@ -43,8 +43,13 @@
 <div style="height:100%">
   <div id="app" style="height:100%">
     <b-navbar fixed="top" variant="info" type="dark">
-      <b-navbar-brand href="#">関国OB2020</b-navbar-brand>
+      <b-navbar-brand href="#">こそれこ</b-navbar-brand>
       <b-navbar-nav class="ml-auto">
+        <b-nav-item-dropdown right>
+          <!-- Using 'button-content' slot -->
+          <template #button-content>{{focusevent}}</template>
+          <b-dropdown-item v-for="(value in allevents)" @click="switchEvent(value)">{{value}}</b-dropdown-item>
+        </b-nav-item-dropdown>
         <b-nav-item-dropdown right>
           <!-- Using 'button-content' slot -->
           <template #button-content>{{disp}}</template>
