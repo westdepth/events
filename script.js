@@ -11,8 +11,8 @@
   },
   methods: {
     switchEvent: function(ename){
-      focusevent = ename;
-      getData();
+      this.focusevent = ename;
+      this.getData();
     },
     swithdiv: function(){
       this.isdiv = !(this.isdiv);
