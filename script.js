@@ -6,8 +6,8 @@
     isdiv:true,
     allrelay:{},
     alldiv:{},
-    allevents:["関国OB2020", "熱い記録会2021"],
-    focusevent:""
+    allevents:[],
+    focusevent:{}
   },
   methods: {
     switchEvent: function(ename){
@@ -138,6 +138,17 @@
   },
   created: function(){
     this.getData();
+    this.allevents = [
+      {
+        "name" : "関国OB2020",
+        "divURL" : "https://script.googleusercontent.com/macros/echo?user_content_key=QWM1gjVOHexAw57l4InpI1LEVgphIkVItPbzUT5R00Nz6sOJ0DJdP05O--URLl5iIyGpjcVF1CmRXEyhf_Zpbyj13ot6XbONm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnMM_m-PkPO14CPt9j2-Ns5MXsMcyTVS2R6qjJeeSma99A6fnhnYWS0v3m5YP8pexOgbU2IR2KBMQ&lib=Mr5SKryE30Nu39veDFTfkPj5oFVHBR1QH",
+        "relayURL" : "https://script.googleusercontent.com/macros/echo?user_content_key=2mc43zYhIk3zIFhxX6Irpr6k9LNERem5nre7V6lIleHY3RYvMLbXTPSvPOLEEnQiw-W3wHfIJQNUrf8zNYA58syli0m321vbm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnFwPPt7wn_KxOhxx31LFqhIyoKozdOWD1TTEDjvvpa545YQ82-ywy6tmQvLmLxX5kmklKx24dvoW&lib=MHaNq37iDjXt9hYPOvq1-Vz5oFVHBR1QH"},
+      {
+        "name" : "熱い記録会2021",
+        "divURL" : "https://script.googleusercontent.com/macros/echo?user_content_key=GlPacGVhOnBSksUM7c2FTb6mtZOS_7fvoQ7Oq1uPFJyCMUbG5aAtI7NvIsoeOG7bH_7oslKw3iawoo-UugJsTj2PhjEgv83Sm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnDsx98u0eWrDhQ_CS0qvNxp9p8CXwUYuVPLbhe0-jEgQSROlrRYjQcWKiwGcQYt4uteKZWGB5IsR9AaX3Qe2pmyXHb92jR6-ig&lib=M2jVyUqdW9oKZ3kZ6FhJI9X1Gu8D64QLl",
+        "relayURL" : "https://script.googleusercontent.com/macros/echo?user_content_key=Xo-QhooUetu3_nCbRaF5G7H-LouVcygeOTG608-UvU6PoZHIqC9HNSf2PK-NRhG8hlJbNG02a2Ajw2mQbLYTiaINzUEocwK9m5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnBCfNVgWBsTXshO-hC26mvW4vyizWF-kYgbeDAu9vuB5G4ELWK0IgLCXmgYT5nqxsvQqo5bNwkpJE3K7GwXLFcybG2h1gWQ5vg&lib=MgiZCirg-A9p3Y8w2Vxb_O31Gu8D64QLl"
+    }
+     ];
     this.focusevent = this.allevents[this.allevents.length - 1];
   },
   computed:{
