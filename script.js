@@ -87,7 +87,7 @@
           }
         }
       }
-      xmlHttpRequest.open('GET', 'this.focusevent.divURL',true);
+      xmlHttpRequest.open('GET', this.focusevent.divURL,true);
       xmlHttpRequest.responseType = 'json';
       xmlHttpRequest.send(null);
     },
