@@ -48,7 +48,7 @@
         <b-nav-item-dropdown right>
           <!-- Using 'button-content' slot -->
           <template #button-content>{{focusevent}}</template>
-          <b-dropdown-item v-for="e in allevents" @click="switchEvent()">{{e}}</b-dropdown-item>
+          <b-dropdown-item v-for="e in allevents" @click="switchEvent(e)">{{e}}</b-dropdown-item>
         </b-nav-item-dropdown>
         <b-nav-item-dropdown right>
           <!-- Using 'button-content' slot -->
