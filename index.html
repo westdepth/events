@@ -45,10 +45,8 @@
     <b-navbar fixed="top" variant="info" type="dark">
       <b-navbar-brand href="#">こそれこ</b-navbar-brand>
       <b-navbar-nav class="ml-auto">
-        <b-nav-item-dropdown right>
-          <!-- Using 'button-content' slot -->
-          <template #button-content>{{focusevent}}</template>
-          <b-dropdown-item v-for="(value in allevents)" @click="switchEvent(value)">{{value}}</b-dropdown-item>
+        <b-nav-item-dropdown text="{{focusevent}}" right>
+          <b-dropdown-item v-for="(val in allevents)" @click="switchEvent(val)">{{val}}</b-dropdown-item>
         </b-nav-item-dropdown>
         <b-nav-item-dropdown right>
           <!-- Using 'button-content' slot -->
