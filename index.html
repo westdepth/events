@@ -48,12 +48,12 @@
         <b-nav-item-dropdown right>
           <!-- Using 'button-content' slot -->
           <template #button-content>{{focusevent}}</template>
-          <b-dropdown-item @click="swithdiv()">{{undisp}}</b-dropdown-item>
+          <b-dropdown-item v-for="e in allevents" @click="swithdiv()">{{e}}</b-dropdown-item>
         </b-nav-item-dropdown>
         <b-nav-item-dropdown right>
           <!-- Using 'button-content' slot -->
           <template #button-content>{{disp}}</template>
-          <b-dropdown-item v-for="e in allevents" @click="swithdiv()">{{e}}</b-dropdown-item>
+          <b-dropdown-item @click="swithdiv()">{{undisp}}</b-dropdown-item>
         </b-nav-item-dropdown>
         <b-nav-item href="http://kansai-swim.com/20201021timeschedule.pdf"><svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-clock" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm8-7A8 8 0 1 1 0 8a8 8 0 0 1 16 0z"/>
