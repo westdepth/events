@@ -137,7 +137,6 @@
     }
   },
   created: function(){
-    this.getData();
     this.allevents = [
       {
         "name" : "関国OB2020",
@@ -150,6 +149,7 @@
     }
      ];
     this.focusevent = this.allevents[this.allevents.length - 1];
+    this.getData();
   },
   computed:{
     loading: function(){
