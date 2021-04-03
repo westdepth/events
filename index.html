@@ -41,24 +41,24 @@
 <body style="height:100%">
 <div style="height:100%">
   <div id="app" style="height:100%">
-    <b-navbar fixed="top" style="background-color:#0e3575; color:#fff;" type="dark">
-      <b-navbar-brand href="#">こそれこ</b-navbar-brand>
+    <b-navbar fixed="top" style="background-color:#0e3575;">
+      <b-navbar-brand href="#" style="color:#fff;">こそれこ</b-navbar-brand>
       <b-navbar-nav class="ml-auto">
         <b-nav-item-dropdown right>
           <!-- Using 'button-content' slot -->
-          <template #button-content>{{focusevent.name}}</template>
-          <b-dropdown-item v-for="e in allevents" v-show="focusevent.name!=e.name" @click="switchEvent(e)">{{e.name}}</b-dropdown-item>
+          <template #button-content style="color:#fff;">{{focusevent.name}}</template>
+          <b-dropdown-item v-for="e in allevents" v-show="focusevent.name!=e.name" @click="switchEvent(e)" style="color:#fff;">{{e.name}}</b-dropdown-item>
         </b-nav-item-dropdown>
         <b-nav-item-dropdown right>
           <!-- Using 'button-content' slot -->
-          <template #button-content>{{disp}}</template>
-          <b-dropdown-item @click="swithdiv()">{{undisp}}</b-dropdown-item>
+          <template #button-content style="color:#fff;">{{disp}}</template>
+          <b-dropdown-item @click="swithdiv()" style="color:#fff;">{{undisp}}</b-dropdown-item>
         </b-nav-item-dropdown>
-        <b-nav-item href="http://kansai-swim.com/20201021timeschedule.pdf"><svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-clock" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <b-nav-item href="http://kansai-swim.com/20201021timeschedule.pdf"><svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-clock" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color:#fff;">
           <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm8-7A8 8 0 1 1 0 8a8 8 0 0 1 16 0z"/>
           <path fill-rule="evenodd" d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z"/>
         </svg></b-nav-item>
-        <b-nav-item @click="getData()"><svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-arrow-repeat round-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <b-nav-item @click="getData()"><svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-arrow-repeat round-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color:#fff;">
           <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
           <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
         </svg></b-nav-item>
